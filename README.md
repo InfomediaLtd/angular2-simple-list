@@ -1,8 +1,11 @@
 # Angular2 Simple List Component
 
-This module can be imported independently to test component imports.
+This module can be imported independently to test component imports. It contains a simple list component that lets you show a list of items.
 
-It contains a simple list component that lets you show a list of items.
+To install this module use JSPM:
+```bash
+jspm install github:InfomediaLtd/angular2-simple-list
+```
 
 The list can be configured to show different contents and show a link.
 
