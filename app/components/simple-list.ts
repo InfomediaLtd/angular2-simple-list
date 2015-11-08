@@ -1,5 +1,6 @@
-import {Component, CORE_DIRECTIVES, Input} from 'angular2/angular2';
+import {Component, CORE_DIRECTIVES, Input, Output, EventEmitter} from 'angular2/angular2';
 import {RouterLink} from 'angular2/router'
+import EventEmitter = webdriver.EventEmitter;
 
 @Component({
     selector: 'simple-list',
@@ -10,7 +11,7 @@ import {RouterLink} from 'angular2/router'
         <div *ng-if="list">
             <table class="table table-striped table-bordered table-hover">
                 <tbody>
-                    <tr *ng-for="#item of list">
+                    <tr *ng-for="#item of list" (mouseover)="current.next(item)" (mouseout)="current.next(null)">
                         <td *ng-if="!link">{{getContent(item)}}</td>
                         <td *ng-if="link"><a [router-link]="link(item)">{{getContent(item)}}</a></td>
                     </tr>
@@ -25,6 +26,7 @@ export class SimpleList {
     @Input() list:any[];
     @Input() content:((any)=>string);
     @Input() link:((any)=>any[]);
+    @Output() current: EventEmitter = new EventEmitter();
 
     constructor() {
     }
@@ -36,5 +38,6 @@ export class SimpleList {
             return item;
         }
     }
+
 
 }
