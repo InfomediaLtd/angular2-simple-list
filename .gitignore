@@ -13,3 +13,5 @@ out
 **.js.map
 
 !config.js
+!karma.conf.js
+!karma-test-shim.js
