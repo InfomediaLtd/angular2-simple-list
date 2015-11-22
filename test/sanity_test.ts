@@ -1,3 +1,5 @@
+import { it, expect } from 'angular2/testing';
+
 describe('universal truths', () => {
   it('should do math', () => {
 
