@@ -1,5 +1,8 @@
 {
   "jspm": {
+    "directories": {
+      "baseURL": "/"
+    },
     "dependencies": {
       "angular2": "npm:angular2@^2.0.0-alpha.45",
       "bootstrap": "github:twbs/bootstrap@^3.3.5",
@@ -15,6 +18,7 @@
   "devDependencies": {
     "live-server": "^0.8.2",
     "angular2": "2.0.0-alpha.45",
+    "typescript": "^1.6.2",
     "jasmine": "2.3.2",
     "jasmine-core": "^2.3.4",
     "jasmine-expect": "^2.0.0-beta2",
@@ -26,7 +30,8 @@
     "karma-jasmine-matchers": "^2.0.0-beta2",
     "karma-jspm": "^2.0.1",
     "karma-phantomjs-launcher": "^0.2.1",
-    "phantomjs": "^1.9.18"
+    "phantomjs": "^1.9.18",
+    "karma-phantomjs-shim": "^1.1.2"
   },
   "scripts": {
     "start": "live-server --no-browser",
