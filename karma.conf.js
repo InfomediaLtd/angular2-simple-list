@@ -3,8 +3,8 @@ module.exports = function(config) {
 
     basePath: '',
 
-    frameworks: ['jspm', 'jasmine'],
-    plugins: [ 'karma-jspm', 'karma-jasmine', 'karma-chrome-launcher', 'karma-phantomjs-launcher' ],
+    frameworks: ['jspm', 'jasmine', 'jasmine-matchers'],
+    plugins: [ 'karma-jspm', 'karma-jasmine', 'karma-chrome-launcher', 'karma-phantomjs-launcher', 'karma-jasmine-matchers' ],
 
     files: [
       {pattern: 'jspm_packages/system.src.js', included: true, watched: true},
