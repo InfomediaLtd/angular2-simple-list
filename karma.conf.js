@@ -7,11 +7,11 @@ module.exports = function(config) {
     plugins: [ 'karma-jspm', 'karma-jasmine', 'karma-chrome-launcher', 'karma-phantomjs-launcher', 'karma-jasmine-matchers' ],
 
     files: [
-      {pattern: 'jspm_packages/system.src.js', included: true, watched: true},
-      {pattern: 'jspm_packages/npm/angular2@2.0.0-alpha.45/bundles/testing.js', included: true, watched: true},
+      {pattern: 'jspm_packages/system.src.js', included: true, watched: false},
+      {pattern: 'jspm_packages/npm/angular2@2.0.0-alpha.45/bundles/testing.js', included: true, watched: false},
       //{pattern: 'jspm_packages/npm/angular2@2.0.0-alpha.45/bundles/angular2.js', included: true, watched: true},
-      {pattern: 'node_modules/angular2/bundles/angular2.js', included: true, watched: true},
-      {pattern: 'karma-test-shim.js', included: true, watched: true},
+      {pattern: 'node_modules/angular2/bundles/angular2.js', included: true, watched: false},
+      {pattern: 'karma-test-shim.js', included: true, watched: false},
 
       //{pattern: 'app/**/*.js', included: false, watched: true},
       //{pattern: 'app/**/*.html', included: false, watched: true},
