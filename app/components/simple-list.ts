@@ -1,6 +1,5 @@
 import {Component, CORE_DIRECTIVES, Input, Output, EventEmitter} from 'angular2/angular2';
 import {RouterLink} from 'angular2/router'
-import EventEmitter = webdriver.EventEmitter;
 
 @Component({
     selector: 'simple-list',
