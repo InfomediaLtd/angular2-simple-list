@@ -1,8 +1,8 @@
 import 'zone.js';
 import 'reflect-metadata';
 
-import {bootstrap, Component} from 'angular2/angular2';
-import {Component} from 'angular2/angular2'
+import {bootstrap} from 'angular2/platform/browser';
+import {Component} from 'angular2/core'
 import {SimpleList} from "./components/simple-list";
 
 import "bootstrap/css/bootstrap.css!"
