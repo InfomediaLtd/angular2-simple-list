@@ -2,22 +2,23 @@ import 'zone.js/dist/zone.min.js';
 import 'reflect-metadata';
 
 import {bootstrap} from 'angular2/platform/browser';
-import {Component} from 'angular2/core'
-import {SimpleList} from "./components/simple-list";
+import {Component, provide} from 'angular2/core'
+import {AppComponent} from "./app-component";
+import {ROUTER_PROVIDERS, RouterOutlet, RouteConfig, LocationStrategy, HashLocationStrategy} from 'angular2/router';
 
 import "bootstrap/css/bootstrap.css!"
 
 @Component({
     selector: 'my-app',
     template: `
-        <simple-list [list]="['a','b','c']" (current)="currentItem=$event"></simple-list>
-        <label>{{currentItem}}</label>
+        <router-outlet></router-outlet>
     `,
-    directives: [SimpleList]
+    directives: [AppComponent, RouterOutlet]
 })
-export class AppComponent {
-    private currentItem:any;
-
+@RouteConfig([
+    {path: '/', component: AppComponent, as: 'AppComponent'}
+])
+export class MainComponent {
 }
 
-bootstrap(AppComponent);
+bootstrap(MainComponent, [ROUTER_PROVIDERS, provide(LocationStrategy, {useClass: HashLocationStrategy})]);
