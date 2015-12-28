@@ -7,7 +7,7 @@ import {
     beforeEachProviders
 } from 'angular2/testing';
 
-import { Component } from 'angular2/angular2';
+import { Component } from 'angular2/core';
 import { SimpleList } from '../app/components/simple-list';
 
 @Component({

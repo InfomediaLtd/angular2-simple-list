@@ -25,7 +25,7 @@ export class SimpleList {
     @Input() list:any[];
     @Input() content:((any)=>string);
     @Input() link:((any)=>any[]);
-    @Output() current: EventEmitter = new EventEmitter();
+    @Output() current: EventEmitter<any> = new EventEmitter();
 
     constructor() {
     }
