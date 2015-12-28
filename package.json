@@ -1,19 +1,18 @@
 {
   "jspm": {
-    "dependencies": {
+    "devDependencies": {
       "angular2": "npm:angular2@^2.0.0-beta.0",
       "bootstrap": "github:twbs/bootstrap@^3.3.5",
       "css": "github:systemjs/plugin-css@^0.1.19",
       "reflect-metadata": "npm:reflect-metadata@^0.1.2",
       "ts": "github:frankwallis/plugin-typescript@^2.1.4",
+      "typescript": "npm:typescript@^1.6.2",
       "zone.js": "npm:zone.js@^0.5.8"
-    },
-    "devDependencies": {
-      "typescript": "npm:typescript@^1.6.2"
     }
   },
   "peerDependencies": {
-    "angular2": "^2.0.x||^2.0.0-beta.0"
+    "angular2": "^2.0.x||^2.0.0-beta.0",
+    "typescript": "^1.6.2"
   },
   "devDependencies": {
     "angular2": "^2.0.x||^2.0.0-beta.0",
