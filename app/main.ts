@@ -16,7 +16,10 @@ import "bootstrap/css/bootstrap.css!"
     directives: [AppComponent, RouterOutlet]
 })
 @RouteConfig([
-    {path: '/', component: AppComponent, as: 'AppComponent'}
+    {path: '/', name: "AppComponent", component: AppComponent, useAsDefault:true},
+    {path: '/appComponentA', name: "AppComponent_a", component: AppComponent},
+    {path: '/appComponentB', name: "AppComponent_b", component: AppComponent},
+    {path: '/appComponentC', name: "AppComponent_c", component: AppComponent}
 ])
 export class MainComponent {
 }

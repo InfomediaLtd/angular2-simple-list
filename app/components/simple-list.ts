@@ -12,7 +12,7 @@ import {RouterLink} from 'angular2/router'
                 <tbody>
                     <tr *ngFor="#item of list" (mouseover)="current.next(item)" (mouseout)="current.next(null)">
                         <td *ngIf="!link">{{getContent(item)}}</td>
-                        <td *ngIf="link"><a [routerLink]="link(item)">{{getContent(item)}}</a></td>
+                        <td *ngIf="link"><a [routerLink]="getLink(item)">{{getContent(item)}}</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -24,7 +24,7 @@ export class SimpleList {
 
     @Input() list:any[];
     @Input() content:((any)=>string);
-    @Input() link:((any)=>any[]);
+    @Input() link:(any)=>any[];
     @Output() current: EventEmitter<any> = new EventEmitter();
 
     constructor() {
@@ -38,5 +38,17 @@ export class SimpleList {
         }
     }
 
+    // work around a problem with changing links for items (Angular2-beta doesn't like that)
+    private linkResultPerItem = {};
+    getLink(item):(any)=>any[] {
+        if (this.link) {
+            if (this.linkResultPerItem[item]==null) {
+                this.linkResultPerItem[item] = this.link(item);
+            }
+            return this.linkResultPerItem[item];
+        } else {
+            return null;
+        }
+    }
 
 }

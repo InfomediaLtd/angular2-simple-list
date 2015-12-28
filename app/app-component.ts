@@ -18,6 +18,6 @@ export class AppComponent {
     private currentItem:any;
 
     getContent(value):string { return "-> " + value + " <-"; }
-    getLink(user):any[] { return ['AppComponent']; }
+    getLink(value):any[] { return ['AppComponent_'+value]; }
 
 }
