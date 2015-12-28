@@ -1,4 +1,10 @@
 {
+
+  "name": "angular2-simple-list",
+  "version": "0.0.1",
+  "description": "A simple list in Angular 2",
+  "main": "app/index.ts",
+  "typings": "app/index.d.ts",
   "jspm": {
     "devDependencies": {
       "angular2": "npm:angular2@^2.0.0-beta.0",
