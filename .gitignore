@@ -9,8 +9,8 @@ out
 .idea/
 .idea_modules/
 
-#**.js
-#**.js.map
+**.js
+**.js.map
 
 !config.js
 !karma.conf.js
