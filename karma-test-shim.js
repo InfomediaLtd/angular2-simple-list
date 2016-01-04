@@ -1,7 +1,6 @@
 // Tun on full stack traces in errors to help debugging
 Error.stackTraceLimit=Infinity;
 
-
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000;
 
 // // Cancel Karma's synchronous start,
@@ -12,8 +11,13 @@ __karma__.loaded = function() {};
 System.config({
   packages: {
     'base/src/app': {
+
+      // !!!
+      // see also tsconfig.json -- its important that the package is set up correctly
       defaultExtension: false,
-      format: 'register',
+      // When the module format is not set, automatic regular-expression-based detection is used.
+      //format: 'register',
+      // !!!
       map: Object.keys(window.__karma__.files).
             filter(onlyAppFiles).
             reduce(function createPathRecords(pathsMapping, appPath) {
@@ -28,7 +32,7 @@ System.config({
     }
 });
 
-System.import('angular2/src/core/dom/browser_adapter').then(function(browser_adapter) {
+System.import('angular2/src/platform/browser/browser_adapter').then(function(browser_adapter) {
   browser_adapter.BrowserDomAdapter.makeCurrent();
 }).then(function() {
   return Promise.all(
