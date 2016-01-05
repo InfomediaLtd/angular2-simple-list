@@ -21,11 +21,12 @@ module.exports = function (config) {
             // useBundles: true,
         },
 
-        //proxies: {
-            //'/jspm_packages/': '/base/jspm_packages/',
-            //'/node_modules/': '/base/node_modules/',
-            //"/app/": "/base/app/",
-        //},
+        // proxies: {
+            // '/jspm_packages/': '/base/jspm_packages/',
+            // '/node_modules/': '/base/node_modules/',
+            // "/app/": "/base/app/",
+            // "/test/": "/base/test/",
+        // },
 
         // list of files / patterns to load in the browser
         files: [
