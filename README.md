@@ -1,5 +1,7 @@
 # Angular2 Simple List Component
 
+Simple Angular 2 component using JSPM and Karma tests.
+
 This module can be imported independently to test component imports. It contains a simple list component that lets you show a list of items.
 
 To install this module use JSPM:
