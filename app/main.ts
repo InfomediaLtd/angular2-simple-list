@@ -10,7 +10,7 @@ import "bootstrap/css/bootstrap.css!"
 
 @Component({
     selector: 'my-app',
-    template: `
+    template: `    
         <router-outlet></router-outlet>
     `,
     directives: [AppComponent, RouterOutlet]

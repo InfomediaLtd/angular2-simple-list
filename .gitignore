@@ -9,9 +9,11 @@ out
 .idea/
 .idea_modules/
 
-**.js
-**.js.map
+app/**/*.js
+app/**/*.js.map
+test/**/*.js
+test/**/*.js.map
+test/**/*.d.ts
 
-!config.js
-!karma.conf.js
-!karma-test-shim.js
+!test/karma-test-shim.js
+!karma*.js

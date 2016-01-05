@@ -7,12 +7,20 @@ System.config({
   },
   paths: {
     "npm:*": "jspm_packages/npm/*",
-    "github:*": "jspm_packages/github/*"
+    "github:*": "jspm_packages/github/*",
+    "typescript": "node_modules/typescript/lib/typescript.js",
+    "systemjs": "node_modules/systemjs/dist/system.js",
+    "system-polyfills": "node_modules/systemjs/dist/system-polyfills.js",
+    "es6-module-loader": "node_modules/es6-module-loader/dist/es6-module-loader.js"
   },
 
   packages: {
     "app": {
       "main": "main",
+      "defaultExtension": "ts"
+    },
+    "test": {
+      "main": "sanity_test.spec",
       "defaultExtension": "ts"
     }
   },
@@ -21,6 +29,7 @@ System.config({
     "angular2": "npm:angular2@2.0.0-beta.0",
     "bootstrap": "github:twbs/bootstrap@3.3.6",
     "css": "github:systemjs/plugin-css@0.1.20",
+    "es6-promise": "npm:es6-promise@3.0.2",
     "reflect-metadata": "npm:reflect-metadata@0.1.2",
     "ts": "github:frankwallis/plugin-typescript@2.4.3",
     "typescript": "npm:typescript@1.7.5",

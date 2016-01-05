@@ -1,5 +1,6 @@
 import {Component, Input, Output, EventEmitter} from 'angular2/core';
 import {RouterLink} from 'angular2/router'
+import {COMMON_DIRECTIVES} from "angular2/src/common/common_directives";
 
 @Component({
     selector: 'simple-list',
@@ -18,7 +19,7 @@ import {RouterLink} from 'angular2/router'
             </table>
         </div>
     `,
-    directives: [RouterLink]
+    directives: [RouterLink, COMMON_DIRECTIVES]
 })
 export class SimpleList {
 

@@ -1,47 +1,61 @@
-module.exports = function(config) {
-  config.set({
+module.exports = function (config) {
+    config.set({
 
-    basePath: '',
+        // basePath: './',
+        frameworks: ['jasmine', 'jspm'],
+        plugins: [
+          'karma-jspm',
+          'karma-jasmine',
+          'karma-mocha-reporter',
+          'karma-chrome-launcher',
+          'karma-phantomjs-launcher',
+          'karma-phantomjs2-launcher',
+        ],
 
-    frameworks: ['jspm', 'jasmine', 'jasmine-matchers'],
-    plugins: [ 'karma-jspm', 'karma-jasmine', 'karma-chrome-launcher', 'karma-phantomjs-launcher', 'karma-jasmine-matchers' ],
+        jspm: {
+            serveFiles: ['app/**/*.+(ts|js|html|css)', 'test/**/*.spec.ts'],
+            // loadFiles: ['test/**/*.spec.ts'],
+            // config: 'config.js',
+            // packages: "jspm_packages",
+            // stripExtension: true,
+            // useBundles: true,
+        },
 
-    files: [
-      {pattern: 'jspm_packages/system.src.js', included: true, watched: false},
-      {pattern: 'jspm_packages/npm/angular2@2.0.0-alpha.45/bundles/testing.js', included: true, watched: false},
-      //{pattern: 'jspm_packages/npm/angular2@2.0.0-alpha.45/bundles/angular2.js', included: true, watched: true},
-      {pattern: 'node_modules/angular2/bundles/angular2.js', included: true, watched: false},
-      {pattern: 'karma-test-shim.js', included: true, watched: false},
-      {pattern: 'test/matchers.js', included: true, watched: false},
+        //proxies: {
+            //'/jspm_packages/': '/base/jspm_packages/',
+            //'/node_modules/': '/base/node_modules/',
+            //"/app/": "/base/app/",
+        //},
 
-      //{pattern: 'app/**/*.js', included: false, watched: true},
-      //{pattern: 'app/**/*.html', included: false, watched: true},
-      //{pattern: 'app/**/*.css', included: false, watched: true},
-      //{pattern: 'test/**/*.js', included: false, watched: true}
-    ],
+        // list of files / patterns to load in the browser
+        files: [
+            // 'test/sanity_test.ts',
+            //{pattern: 'node_modules/angular2/bundles/testing.dev.js', included: true, watched: false},
+            //{pattern: 'node_modules/angular2/bundles/angular2.dev.js', included: true, watched: true},
+            {pattern: 'node_modules/angular2/bundles/angular2-polyfills.js', included: true, watched: false},
+            {pattern: 'node_modules/phantomjs-polyfill/bind-polyfill.js', included: true, watched: false}, // PhantomJS
+            {pattern: 'node_modules/es6-shim/es6-shim.js', included: true, watched: false}, // PhantomJS & PhantomJS2
+            {pattern: 'test/karma-test-shim.js', included: true, watched: false},
 
-    jspm: {
-      config: 'config.js',
-      loadFiles: [
-        'app/**/*',
-        'test/**/*.js'
-      ],
-      serveFiles: ['app/**/*.+(js|html|css)'],
-      stripExtension: true
-    },
+            // {pattern: 'node_modules/rxjs/bundles/Rx.js', included: true, watched: true},
+            // {pattern: 'node_modules/angular2/bundles/http.dev.js', included: true, watched: true},
+            // {pattern: 'node_modules/typescript/lib/typescript.js', included: true, watched: false},
+            // {pattern: 'jspm_packages/system.src.js', included: true, watched: false},
+            // {pattern: 'jspm_packages/system-polyfills.js', included: true, watched: false}, // PhantomJS2
+        ],
 
-    proxies: {
-      "/app/": "/base/app/",
-      '/jspm_packages/': '/base/jspm_packages/',
-      '/base/jspm_packages': '/base/app/jspm_packages'
-    },
+        // exclude: [],
 
-    reporters: ['progress'],
-    port: 9876,
-    colors: true,
-    logLevel: config.LOG_INFO,
-    autoWatch: true,
-    browsers: ['Chrome'],
-    singleRun: false
-  })
+        // possible values: 'dots', 'progress', 'mocha', 'coverage' (https://npmjs.org/browse/keyword/karma-reporter)
+        reporters: ['mocha'],
+
+        // browsers: ['Chrome'], // 'PhantomJS'
+        browsers: ['PhantomJS'], // 'Chrome'
+
+        // port: 9876,
+        // colors: true,
+        // logLevel: config.LOG_INFO,
+        // autoWatch: false,
+        // singleRun: true
+    })
 };
