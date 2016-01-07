@@ -29,21 +29,22 @@
   },
   "devDependencies": {
     "angular2": "^2.0.x||^2.0.0-beta.0",
-    "rxjs": "^5.0.0-beta.0",
     "es6-shim": "^0.34.0",
     "jasmine-core": "^2.4.1",
     "jspm": "^0.16.19",
     "karma": "^0.13.16",
+    "karma-chrome-launcher": "^0.2.2",
     "karma-jasmine": "^0.3.6",
     "karma-jspm": "^2.0.2",
     "karma-mocha-reporter": "^1.1.5",
-    "karma-chrome-launcher": "^0.2.2",
     "karma-phantomjs-launcher": "^0.2.2",
     "karma-phantomjs2-launcher": "^0.4.0",
+    "live-server": "^0.8.2",
     "phantomjs": "^1.9.19",
     "phantomjs-polyfill": "0.0.1",
     "phantomjs2": "^2.0.2",
-    "live-server": "^0.8.2"
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.0"
   },
   "scripts": {
     "serve": "live-server --no-browser",

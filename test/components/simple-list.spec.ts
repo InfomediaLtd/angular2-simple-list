@@ -36,7 +36,7 @@ export function main() {
 
                     fixture.detectChanges();
 
-                    const nativeElement = fixture.debugElement.nativeElement;
+                    const nativeElement:HTMLElement = fixture.debugElement.nativeElement;
                     const textContent = nativeElement.textContent;
 
                     // console.log(fixture.debugElement.componentInstance);
