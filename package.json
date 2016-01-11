@@ -14,7 +14,7 @@
       "es6-promise": "npm:es6-promise@^3.0.2"
     },
     "devDependencies": {
-      "angular2": "npm:angular2@^2.0.0-beta.0",
+      "angular2": "npm:angular2@^2.0.0-beta.1",
       "bootstrap": "github:twbs/bootstrap@^3.3.5",
       "css": "github:systemjs/plugin-css@^0.1.19",
       "reflect-metadata": "npm:reflect-metadata@^0.1.2",
@@ -24,11 +24,11 @@
     }
   },
   "peerDependencies": {
-    "angular2": "^2.0.x||^2.0.0-beta.0",
+    "angular2": "^2.0.x||^2.0.0-beta.1",
     "typescript": "^1.6.2"
   },
   "devDependencies": {
-    "angular2": "^2.0.x||^2.0.0-beta.0",
+    "angular2": "^2.0.x||^2.0.0-beta.1",
     "es6-shim": "^0.34.0",
     "jasmine-core": "^2.4.1",
     "jspm": "^0.16.19",
