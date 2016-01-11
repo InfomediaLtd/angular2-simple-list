@@ -3,7 +3,7 @@ import {
     describe,
     expect,
     injectAsync,
-    TestComponentBuilder,
+    TestComponentBuilder as TCB,
     beforeEachProviders
 } from 'angular2/testing';
 
@@ -23,7 +23,7 @@ export function main() {
 
         beforeEachProviders(() => [SimpleList]);
 
-        it('should repeat list items', injectAsync([TestComponentBuilder], (tcb:TestComponentBuilder) => {
+        it('should repeat list items', injectAsync([TCB], (tcb:TCB) => {
             return tcb
                 // .overrideTemplate(TestComponent, '<simple-list [list]="[1,2,3]"></simple-list>')
                 // .overrideTemplate(TestComponent, `
