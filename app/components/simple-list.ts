@@ -43,10 +43,14 @@ export class SimpleList {
     private linkResultPerItem = {};
     getLink(item):(any)=>any[] {
         if (this.link) {
-            if (this.linkResultPerItem[item]==null) {
-                this.linkResultPerItem[item] = this.link(item);
+            var key = item;
+            if (typeof key === "object") {
+                key = JSON.stringify(key);
             }
-            return this.linkResultPerItem[item];
+            if (this.linkResultPerItem[key]==null) {
+                this.linkResultPerItem[key] = this.link(item);
+            }
+            return this.linkResultPerItem[key];
         } else {
             return null;
         }
