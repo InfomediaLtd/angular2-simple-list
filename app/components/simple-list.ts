@@ -11,7 +11,7 @@ import {COMMON_DIRECTIVES} from "angular2/src/common/common_directives";
         <div *ngIf="list">
             <table class="table table-striped table-bordered table-hover">
                 <tbody>
-                    <tr *ngFor="#item of list" (mouseover)="current.next(item)" (mouseout)="current.next(null)">
+                    <tr *ngFor="#item of list" (mouseover)="current.emit(item)" (mouseout)="current.emit(null)">
                         <td *ngIf="!link">{{getContent(item)}}</td>
                         <td *ngIf="link"><a [routerLink]="getLink(item)">{{getContent(item)}}</a></td>
                     </tr>
