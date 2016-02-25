@@ -14,14 +14,14 @@
       "es6-promise": "npm:es6-promise@^3.0.2"
     },
     "devDependencies": {
-      "angular2": "npm:angular2@^2.0.0-beta.1",
+      "angular2": "npm:angular2@^2.0.0-beta.7",
       "bootstrap": "github:twbs/bootstrap@^3.3.5",
       "clean-css": "npm:clean-css@^3.4.9",
       "css": "github:systemjs/plugin-css@^0.1.19",
       "reflect-metadata": "npm:reflect-metadata@^0.1.2",
       "ts": "github:frankwallis/plugin-typescript@^2.1.4",
       "typescript": "npm:typescript@^1.6.2",
-      "zone.js": "npm:zone.js@0.5.10"
+      "zone.js": "npm:zone.js@^0.5.15"
     }
   },
   "peerDependencies": {
@@ -29,7 +29,7 @@
     "typescript": "^1.6.2"
   },
   "devDependencies": {
-    "angular2": "^2.0.x||^2.0.0-beta.1",
+    "angular2": "^2.0.x||^2.0.0-beta.7",
     "es6-shim": "^0.34.0",
     "jasmine-core": "^2.4.1",
     "jspm": "^0.16.19",
@@ -45,7 +45,7 @@
     "phantomjs-polyfill": "0.0.1",
     "phantomjs2": "^2.0.2",
     "reflect-metadata": "^0.1.2",
-    "rxjs": "^5.0.0-beta.0"
+    "rxjs": "^5.0.0-beta.2"
   },
   "scripts": {
     "serve": "live-server --no-browser",
