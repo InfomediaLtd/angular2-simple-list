@@ -4,7 +4,8 @@ import {
     expect,
     injectAsync,
     TestComponentBuilder as TCB,
-    beforeEachProviders
+    beforeEachProviders,
+    ComponentFixture
 } from 'angular2/testing';
 
 import { Component } from 'angular2/core';
@@ -30,7 +31,7 @@ export function main() {
                 // <button [disabled]="true">Save</button><button [disabled]="false">Save</button>
                 // <span [ngClass]="'special'">aaa</span>
                 // `)
-                .createAsync(TestComponent).then((fixture) => {
+                .createAsync(TestComponent).then((fixture:ComponentFixture) => {
 
                     expect(1 + 1).toEqual(2);
 
