@@ -50,8 +50,8 @@ module.exports = function (config) {
         // possible values: 'dots', 'progress', 'mocha', 'coverage' (https://npmjs.org/browse/keyword/karma-reporter)
         reporters: ['mocha'],
 
-        // browsers: ['Chrome'], // 'PhantomJS'
-        browsers: ['PhantomJS'], // 'Chrome'
+        browsers: ['Chrome'], // 'PhantomJS'
+        // browsers: ['PhantomJS'], // 'Chrome'
 
         // port: 9876,
         // colors: true,
