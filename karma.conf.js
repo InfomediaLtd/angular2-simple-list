@@ -9,7 +9,7 @@ module.exports = function (config) {
           'karma-mocha-reporter',
           'karma-chrome-launcher',
           'karma-phantomjs-launcher',
-          'karma-phantomjs2-launcher',
+          // 'karma-phantomjs2-launcher',
         ],
 
         jspm: {
