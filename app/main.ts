@@ -4,13 +4,14 @@ import 'reflect-metadata';
 import {bootstrap} from 'angular2/platform/browser';
 import {Component, provide} from 'angular2/core'
 import {AppComponent} from "./app-component";
-import {ROUTER_PROVIDERS, RouterOutlet, RouteConfig, LocationStrategy, HashLocationStrategy} from 'angular2/router';
+import {LocationStrategy, HashLocationStrategy} from 'angular2/platform/common';
+import {ROUTER_PROVIDERS, RouterOutlet, RouteConfig} from 'angular2/router';
 
 import "bootstrap/css/bootstrap.css!"
 
 @Component({
     selector: 'my-app',
-    template: `    
+    template: `
         <router-outlet></router-outlet>
     `,
     directives: [AppComponent, RouterOutlet]

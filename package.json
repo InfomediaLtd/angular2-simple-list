@@ -11,7 +11,7 @@
   ],
   "jspm": {
     "devDependencies": {
-      "angular2": "npm:angular2@^2.0.0-beta.14",
+      "angular2": "npm:angular2@^2.0.0-beta.17",
       "bootstrap": "github:twbs/bootstrap@^3.3.5",
       "clean-css": "npm:clean-css@^3.4.9",
       "crypto": "github:jspm/nodelibs-crypto@^0.1.0",
@@ -27,7 +27,7 @@
     "typescript": "^1.8.9"
   },
   "devDependencies": {
-    "angular2": "^2.0.x||^2.0.0-beta.14",
+    "angular2": "^2.0.x||^2.0.0-beta.17",
     "es6-shim": "^0.34.0",
     "jasmine-core": "^2.4.1",
     "jspm": "^0.16.19",
