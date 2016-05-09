@@ -1,5 +1,5 @@
-import {Component, Input, Output, EventEmitter} from 'angular2/core';
-import {RouterLink} from 'angular2/router'
+import {Component, Input, Output, EventEmitter} from '@angular/core';
+import {RouterLink} from '@angular/router-deprecated'
 
 @Component({
     selector: 'simple-list',

@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core'
+import {Component} from '@angular/core'
 import {SimpleList} from "./components/simple-list";
 
 @Component({

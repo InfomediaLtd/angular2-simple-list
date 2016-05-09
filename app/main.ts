@@ -1,11 +1,11 @@
 import 'zone.js/dist/zone.min.js';
 import 'reflect-metadata';
 
-import {bootstrap} from 'angular2/platform/browser';
-import {Component, provide} from 'angular2/core'
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component, provide} from '@angular/core'
 import {AppComponent} from "./app-component";
-import {LocationStrategy, HashLocationStrategy} from 'angular2/platform/common';
-import {ROUTER_PROVIDERS, RouterOutlet, RouteConfig} from 'angular2/router';
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+import {ROUTER_PROVIDERS, RouterOutlet, RouteConfig} from '@angular/router-deprecated';
 
 import "bootstrap/css/bootstrap.css!"
 
