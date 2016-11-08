@@ -9,6 +9,8 @@ import {SimpleList} from "../src/simple-list";
             (current)="currentItem=$event"
             [content]="getContent"
             [link]="getLink"></simple-list>
+        <br/>
+        <hr/>
         <label>{{currentItem}}</label>
     `
 })

@@ -7,14 +7,12 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
             Loading...
         </div>
         <div *ngIf="list">
-            <table class="table table-striped table-bordered table-hover">
-                <tbody>
-                    <tr *ngFor="let item of list" (mouseover)="current.emit(item)" (mouseout)="current.emit(null)">
-                        <td *ngIf="!link">{{getContent(item)}}</td>
-                        <td *ngIf="link"><a [routerLink]="getLink(item)">{{getContent(item)}}</a></td>
-                    </tr>
-                </tbody>
-            </table>
+            <md-list>
+                <md-list-item *ngFor="let item of list" (mouseover)="current.emit(item)" (mouseout)="current.emit(null)">
+                    <div *ngIf="!link">{{getContent(item)}}</div>
+                    <div *ngIf="link"><a [routerLink]="getLink(item)">{{getContent(item)}}</a></div>
+                </md-list-item>
+            </md-list>
         </div>
     `
 })
