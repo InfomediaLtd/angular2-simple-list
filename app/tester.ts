@@ -1,8 +1,8 @@
 import {Component} from '@angular/core'
-import {SimpleList} from "./components/simple-list";
+import {SimpleList} from "../src/simple-list";
 
 @Component({
-    selector: 'app-component',
+    selector: 'tester',
     template: `
         <simple-list
             [list]="['a','b','c']"
@@ -10,14 +10,13 @@ import {SimpleList} from "./components/simple-list";
             [content]="getContent"
             [link]="getLink"></simple-list>
         <label>{{currentItem}}</label>
-    `,
-    directives: [SimpleList]
+    `
 })
-export class AppComponent {
+export class TesterComponent {
 
     private currentItem:any;
 
     getContent(value):string { return "-> " + value + " <-"; }
-    getLink(value):any[] { return ['AppComponent_'+value]; }
+    getLink(value:string):any[] { return ['/appComponent'+value.toUpperCase()]; }
 
 }

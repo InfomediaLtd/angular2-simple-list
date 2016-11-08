@@ -1,5 +1,4 @@
 import {Component, Input, Output, EventEmitter} from '@angular/core';
-import {RouterLink} from '@angular/router-deprecated'
 
 @Component({
     selector: 'simple-list',
@@ -17,8 +16,7 @@ import {RouterLink} from '@angular/router-deprecated'
                 </tbody>
             </table>
         </div>
-    `,
-    directives: [RouterLink]
+    `
 })
 export class SimpleList {
 
@@ -40,16 +38,9 @@ export class SimpleList {
 
     // work around a problem with changing links for items (Angular2-beta doesn't like that)
     private linkResultPerItem = {};
-    getLink(item):(any)=>any[] {
+    getLink(item):any[] {
         if (this.link) {
-            var key = item;
-            if (typeof key === "object") {
-                key = JSON.stringify(key);
-            }
-            if (this.linkResultPerItem[key]==null) {
-                this.linkResultPerItem[key] = this.link(item);
-            }
-            return this.linkResultPerItem[key];
+            return this.link(item);
         } else {
             return null;
         }

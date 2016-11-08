@@ -1,55 +1,55 @@
-import {
-    it,
-    describe,
-    expect,
-    injectAsync,
-    TestComponentBuilder as TCB,
-    beforeEachProviders,
-    ComponentFixture
-} from 'angular2/testing';
+// import {
+//     it,
+//     describe,
+//     expect,
+//     injectAsync,
+//     TestComponentBuilder as TCB,
+//     beforeEachProviders,
+//     ComponentFixture
+// } from 'angular2/testing';
 
-import { Component } from 'angular2/core';
-import { SimpleList } from '../../app/components/simple-list';
-// import { COMMON_DIRECTIVES } from "angular2/src/common/common_directives";
+// import { Component } from 'angular2/core';
+// import { SimpleList } from '../../app/components/simple-list';
+// // import { COMMON_DIRECTIVES } from "angular2/src/common/common_directives";
 
-export function main() {
+// export function main() {
 
-    @Component({
-        template: `<simple-list [list]="[1,2,3]"></simple-list>`,
-        directives: [SimpleList]
-    })
-    class TestComponent { }
+//     @Component({
+//         template: `<simple-list [list]="[1,2,3]"></simple-list>`,
+//         directives: [SimpleList]
+//     })
+//     class TestComponent { }
 
-    describe('SimpleList', () => {
+//     describe('SimpleList', () => {
 
-        beforeEachProviders(() => [SimpleList]);
+//         beforeEachProviders(() => [SimpleList]);
 
-        it('should repeat list items', injectAsync([TCB], (tcb:TCB) => {
-            return tcb
-                // .overrideTemplate(TestComponent, '<simple-list [list]="[1,2,3]"></simple-list>')
-                // .overrideTemplate(TestComponent, `
-                // <button [disabled]="true">Save</button><button [disabled]="false">Save</button>
-                // <span [ngClass]="'special'">aaa</span>
-                // `)
-                .createAsync(TestComponent).then((fixture:ComponentFixture) => {
+//         it('should repeat list items', injectAsync([TCB], (tcb:TCB) => {
+//             return tcb
+//                 // .overrideTemplate(TestComponent, '<simple-list [list]="[1,2,3]"></simple-list>')
+//                 // .overrideTemplate(TestComponent, `
+//                 // <button [disabled]="true">Save</button><button [disabled]="false">Save</button>
+//                 // <span [ngClass]="'special'">aaa</span>
+//                 // `)
+//                 .createAsync(TestComponent).then((fixture:ComponentFixture) => {
 
-                    expect(1 + 1).toEqual(2);
+//                     expect(1 + 1).toEqual(2);
 
-                    fixture.detectChanges();
+//                     fixture.detectChanges();
 
-                    const nativeElement:HTMLElement = fixture.debugElement.nativeElement;
-                    const textContent = nativeElement.textContent;
+//                     const nativeElement:HTMLElement = fixture.debugElement.nativeElement;
+//                     const textContent = nativeElement.textContent;
 
-                    // console.log(fixture.debugElement.componentInstance);
-                    // console.log(fixture.debugElement.nativeElement);
-                    // console.log(fixture.debugElement.nativeElement.textContent);
-                    // console.log(textContent);
+//                     // console.log(fixture.debugElement.componentInstance);
+//                     // console.log(fixture.debugElement.nativeElement);
+//                     // console.log(fixture.debugElement.nativeElement.textContent);
+//                     // console.log(textContent);
 
-                    expect(textContent).toContain('1');
-                    expect(textContent).toContain('2');
-                    expect(textContent).toContain('3');
-                });
-        }));
+//                     expect(textContent).toContain('1');
+//                     expect(textContent).toContain('2');
+//                     expect(textContent).toContain('3');
+//                 });
+//         }));
 
-    });
-}
+//     });
+// }
